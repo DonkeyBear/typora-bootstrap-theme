@@ -4,9 +4,6 @@
 
 html {
   font-size: 20px;
-}
-
-body {
   background-color: var(--bs-gray-200);
 }
 
@@ -25,6 +22,36 @@ a {
   border-radius: 0.5rem;
   padding: 0.75rem 1rem;
   border: var(--bs-gray-300) 1px solid;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --dark-mode-color-15: hsl(210, 22%, 15%);
+    --dark-mode-color-20: hsl(210, 22%, 20%);
+    --dark-mode-color-25: hsl(210, 22%, 25%);
+    --dark-mode-color-30: hsl(210, 22%, 30%);
+  }
+
+  html {
+    background-color: var(--dark-mode-color-15);
+  }
+
+  body, .dropdown-menu > li > a {
+    color: var(--bs-gray-200) !important;
+  }
+
+  .md-fences {
+    background-color: var(--bs-gray-100);
+    border: var(--bs-gray-300) 1px solid;
+  }
+
+  #toc-dropmenu, #typora-sidebar {
+    background-color: var(--dark-mode-color-20);
+  }
+  
+  .file-list-item.active {
+    background-color: var(--dark-mode-color-30);
+  }
 }
 
 #write {
